@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  color: #272B34;
+  font-family: 'Noah', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.link-button {
+  font-size: 3.6rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  color: #3377FE;
+}
+
+.link-button:hover svg path {
+  fill: #3377FE;
+}
+
+.link-button svg {
+  width: 5rem;
+  height: auto;
+}
+
+.link-button span {
+  padding-left: 1.5rem;
+}
+
+/* Link style reset */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Media queries for convenient rem use */
+@media (max-width: 576px) {
+  html {
+    font-size: 5px
+  }
+}
+@media (min-width: 576px) {
+  html {
+    font-size: 6px
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 7px
+  }
+}
+@media (min-width: 992px) {
+  html {
+    font-size: 8px
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 10px
+  }
+}
+
+/* Container styles from Bootstrap */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width:540px
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width:720px
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width:960px
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width:1140px
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width:1540px
+  }
+}

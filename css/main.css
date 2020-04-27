@@ -1,0 +1,44 @@
+header {
+  padding-top: 4rem;
+  margin-bottom: 11rem;
+}
+
+.header__title {
+  margin-bottom: .8rem;
+  line-height: 4.2rem;
+}
+
+.header__title-additive {
+  opacity: 0.6;
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.about-me {
+  font-size: 3.2rem;
+  margin-bottom: 4rem;
+}
+
+.about-me__contact {
+  margin: 2rem 0;
+}
+
+.about-me__contact span {
+  font-weight: 700;
+}
+
+.my-work__title-container {
+  background-color: #383C47;
+  border-radius: 7px;
+  padding: 1.7rem 0;
+  text-align: center;
+}
+
+.my-work__title {
+  color: #fff;
+}
+
+.my-work__filter-list {
+  padding: 2rem 1.5rem;
+}
