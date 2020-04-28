@@ -41,4 +41,37 @@ header {
 
 .my-work__filter-list {
   padding: 2rem 1.5rem;
+  padding-bottom: 0;
+}
+
+.filter-list__tag {
+  display: inline-block;
+  padding: .8rem 1.6rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  border: .3rem solid #272B34;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 2.5rem;
+  margin-bottom: 2rem;
+  transition: .4s;
+}
+
+.filter-list__tag:not(.active):hover {
+  border: .3rem solid #777A7F;
+}
+
+.filter-list__tag.active {
+  background-color: #3377FE;
+  color: #fff;
+  border: .3rem solid #CACBCB;
+  transition: background-color .2s;
+}
+
+.filter-list__tag.active:hover {
+  background-color: #518BFE;
+}
+
+.my-work__filter-list {
+  border-bottom: 2px solid #E4E4E4;
 }
