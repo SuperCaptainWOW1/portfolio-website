@@ -21,6 +21,11 @@ h2 {
   font-weight: 700;
 }
 
+h3 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
 .link-button {
   font-size: 3.6rem;
   font-weight: 700;
@@ -51,7 +56,12 @@ h2 {
 /* Link style reset */
 a {
   color: inherit;
-  text-decoration: none;
+  /* text-decoration: none; */
+}
+
+/* Fixing image falling out of a container */
+img {
+  max-width: 100%;
 }
 
 /* Media queries for convenient rem use */
