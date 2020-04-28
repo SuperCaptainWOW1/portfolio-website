@@ -27,6 +27,7 @@ h2 {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  transition: .2s;
 }
 
 .link-button:hover {
@@ -37,9 +38,10 @@ h2 {
   fill: #3377FE;
 }
 
-.link-button svg {
+.link-button svg path {
   width: 5rem;
   height: auto;
+  transition: .2s;
 }
 
 .link-button span {
