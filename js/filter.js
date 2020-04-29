@@ -10,7 +10,7 @@ const filterData = {
     {
       "title": "Travel Log",
       "description": "App lets you mark places where you have traveled and leave a comment with a rating on it.",
-      "taglist": ["Full-Stack", "React JS", "Express JS", "MongoDB", "Mapbox"],
+      "taglist": ["Express JS", "MongoDB"],
       "demoUrl": "/travel-log.html",
       "imgSrc": "../img/project1.png",
       "codeUrl": "https://github.com/supercaptainwow1/travel-log"
@@ -18,7 +18,7 @@ const filterData = {
     {
       "title": "Travel Log",
       "description": "App lets you mark places where you have traveled and leave a comment with a rating on it.",
-      "taglist": ["Full-Stack", "React JS", "Express JS", "MongoDB", "Mapbox"],
+      "taglist": ["Frontend", "Backend"],
       "imgSrc": "../img/project1.png",
       "demoUrl": "/travel-log.html",
       "codeUrl": "https://github.com/supercaptainwow1/travel-log"
@@ -26,7 +26,7 @@ const filterData = {
     {
       "title": "Travel Log",
       "description": "App lets you mark places where you have traveled and leave a comment with a rating on it.",
-      "taglist": ["Full-Stack", "React JS", "Express JS", "MongoDB", "Mapbox"],
+      "taglist": ["React JS",],
       "imgSrc": "../img/project1.png",
       "demoUrl": "/travel-log.html",
       "codeUrl": "https://github.com/supercaptainwow1/travel-log"
@@ -34,13 +34,14 @@ const filterData = {
     {
       "title": "Travel Log",
       "description": "App lets you mark places where you have traveled and leave a comment with a rating on it.",
-      "taglist": ["Full-Stack", "React JS", "Express JS", "MongoDB", "Mapbox"],
+      "taglist": ["Full-Stack", "React JS"],
       "imgSrc": "../img/project1.png",
       "demoUrl": "/travel-log.html",
       "codeUrl": "https://github.com/supercaptainwow1/travel-log"
     }
   ]
 }
+let activeTags = [];
 
 function init() {
   getTags();
@@ -69,15 +70,39 @@ function makeTagsClickable() {
     tag.addEventListener('click',e => {
       if (!e.target.classList.contains('active')) {
         e.target.classList.add('active');
+
+        // Add tags to the active list
+        activeTags.push(e.target.innerText);
       } else {
         e.target.classList.remove('active');
+
+        // Remove tag from the active list
+        activeTags = activeTags.filter(tag => tag != e.target.innerText);
       }
+
+      getProjects();
     })
   })
 }
 
 function getProjects()  {
-  filterData.projects.forEach(p => {
+  let projectsList = filterData.projects;
+
+  // Clear before adding new items
+  document.querySelector('.projects-list').innerHTML = '';
+
+  // Filter only if one or more tags selected
+  if (activeTags.length !== 0) {
+    // Append only items that match selected tags
+    projectsList = filterData.projects.filter(p => {
+      return p.taglist.some(item => activeTags.includes(item));
+    })
+    // Reverse for left-to-right display
+    .reverse();
+  }
+
+  // Create and append each element
+  projectsList.forEach(p => {
     const div = document.createElement('div');
     div.className = 'project-item';
 
