@@ -3,41 +3,55 @@ const filterData = {
     "Full-Stack",
     "Frontend",
     "Backend",
+    "Just HTML/CSS",
     "Vue JS",
-    "React JS"
+    "React JS", 
+    "Native Javascript",
+    "Express JS",
+    "MongoDB",
+    "Bootstrap",
+    "Mapbox"
   ],
   "projects": [
     {
       "title": "Travel Log",
       "description": "App lets you mark places where you have traveled and leave a comment with a rating on it.",
-      "taglist": ["Express JS", "MongoDB"],
-      "demoUrl": "/travel-log.html",
-      "imgSrc": "../img/project1.png",
+      "taglist": ["Full-Stack", "React JS", "Express JS", "MongoDB", "Mapbox"],
+      "demoUrl": "https://travel-log-client.herokuapp.com/",
+      "imgSrc": "../img/travel-log.jpg",
       "codeUrl": "https://github.com/supercaptainwow1/travel-log"
     },
     {
-      "title": "Travel Log",
-      "description": "App lets you mark places where you have traveled and leave a comment with a rating on it.",
-      "taglist": ["Frontend", "Backend"],
-      "imgSrc": "../img/project1.png",
-      "demoUrl": "/travel-log.html",
-      "codeUrl": "https://github.com/supercaptainwow1/travel-log"
+      "title": "History of Cinematography Website",
+      "description": "Presentational website designed and coded by me",
+      "taglist": ["Frontend", "Just HTML/CSS"],
+      "imgSrc": "../img/history-of-cinematography-website.jpg",
+      "demoUrl": "https://supercaptainwow1.github.io/history-of-cinematography-website/index.html",
+      "codeUrl": "https://github.com/SuperCaptainWOW1/history-of-cinematography-website"
     },
     {
-      "title": "Travel Log",
+      "title": "Vue Online Landing Store",
       "description": "App lets you mark places where you have traveled and leave a comment with a rating on it.",
-      "taglist": ["React JS",],
-      "imgSrc": "../img/project1.png",
-      "demoUrl": "/travel-log.html",
-      "codeUrl": "https://github.com/supercaptainwow1/travel-log"
+      "taglist": ["Frontend", "Vue JS", "Bootstrap"],
+      "imgSrc": "../img/vue-landing-store.jpg",
+      "demoUrl": "https://vue-landing-store-client.herokuapp.com/",
+      "codeUrl": "https://github.com/SuperCaptainWOW1/vue-online-landing-store"
     },
     {
-      "title": "Travel Log",
-      "description": "App lets you mark places where you have traveled and leave a comment with a rating on it.",
-      "taglist": ["Full-Stack", "React JS"],
-      "imgSrc": "../img/project1.png",
-      "demoUrl": "/travel-log.html",
-      "codeUrl": "https://github.com/supercaptainwow1/travel-log"
+      "title": "Game Library CRUD App",
+      "description": "Game library app in which you can create, read, update, and delete information about games",
+      "taglist": ["Frontend", "Native Javascript"],
+      "imgSrc": "../img/game-library-crud.jpg",
+      "demoUrl": "https://supercaptainwow1.github.io/Game-Library-CRUD-Application/index.html",
+      "codeUrl": "https://github.com/SuperCaptainWOW1/Game-Library-CRUD-Application"
+    },
+    {
+      "title": "Authentication API",
+      "description": "Authentication API built on top of express and mongodb.",
+      "taglist": ["Backend", "Express JS", "MongoDB"],
+      "imgSrc": "../img/auth-api.png",
+      "demoUrl": "https://github.com/SuperCaptainWOW1/authentication-express-mongodb-api",
+      "codeUrl": "https://github.com/SuperCaptainWOW1/authentication-express-mongodb-api"
     }
   ]
 }
@@ -120,15 +134,15 @@ function getProjects()  {
         <div class="project-item__tags">
           ${tags}
         </div>
-        <div class="project-item__buttons">
-          <a href="${p.demoUrl}" target="_blank" class="project-item__btn demo">
-            Demo
-          </a>
+      </div>
+      <div class="project-item__buttons">
+        <a href="${p.demoUrl}" target="_blank" class="project-item__btn demo">
+          Demo
+        </a>
 
-          <a href="${p.codeUrl}" target="_blank" class="project-item__btn code">
-            Code
-          </a>
-        </div>
+        <a href="${p.codeUrl}" target="_blank" class="project-item__btn code">
+          Code
+        </a>
       </div>
     `;
 
